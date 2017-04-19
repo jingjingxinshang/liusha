@@ -1,0 +1,335 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> title </title>
+		<link rel="stylesheet" href="js/bo/css/bootstrap.css">
+		<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="./js/bo/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/shi.css">
+
+	</head>
+
+	<body>
+		<div id="all">
+			<div id="top">
+				<div id="black">
+					<div class="content">
+						<p>更懂用户更懂创业者的<br>互联网产品解决方案服务平台<br>专注微信、互联网+ 功能开发与运营</p>
+						<button class="butt">选择服务</button>
+					</div>
+				</div>
+				<video loop autoplay="autoplay" style="width: 100%;">
+					<source src="https://oa6dz61c8.qnssl.com/back.mp4" type="video/mp4">
+					<source>
+					<source src="https://oa6dz61c8.qnssl.com/back.mp4" type="video/ogv">
+					<source>
+					<source src="https://oa6dz61c8.qnssl.com/back.mp4" type="video/webm">
+					<source>
+				</video>
+			</div>
+
+			<div class="mid ">
+				<div class="made m2">
+					<div class="content" style="top: 35%;">
+						<p>更懂用户更懂创业者的<br>互联网产品解决方案服务平台<br>专注微信、互联网+ 功能开发与运营</p>
+						<button class="butt">选择服务</button>
+					</div>
+				</div>
+				<video loop autoplay="autoplay" style="width: 100%">
+					<source src="https://oa6dz61c8.qnssl.com/guanxi.mp4" type="video/mp4">
+					<source>
+				</video>
+			</div>
+			<!--==============33333333333333333==============-->
+			<div class="mid m3">
+				<div class="made">
+					<div class="content" style="top: 25%;">
+						<p>更懂用户更懂创业者的<br>互联网产品解决方案服务平台<br>专注微信、互联网+ 功能开发与运营</p>
+						<button class="butt">选择服务</button>
+					</div>
+				</div>
+			</div>
+			<!--===============4444444444444=============-->
+
+			<div class="mid m4">
+				<div class="made">
+					<div class="content" style="top: 300px;">
+						<p>更懂用户更懂创业者的<br>互联网产品解决方案服务平台<br>专注微信、互联网+ 功能开发与运营</p>
+						<button class="butt">选择服务</button>
+					</div>
+				</div>
+
+			</div>
+			<!-- 点击 -->
+			<div class="shang">
+				<div class="glyphicon glyphicon-tasks vector"></div>
+				<b style="font-size:3em;display: block;color: white; position: fixed;left: 25px; top: 18px;">ABC</b>
+				<ul class="lists">
+					<h3>流沙云<div id="xx" >&times;</div></h3>
+					<li id="o1">
+						<a href="#"> 星期一 </a>
+					</li>
+					<li>
+						<a href="#">星期二</a>
+					</li>
+					<li>
+						<a href="#">星期三</a>
+					</li>
+					<li>
+						<a href="#">星期四</a>
+					</li>
+					<li>
+						<a href="#">星期五</a>
+					</li>
+				</ul>
+			</div>
+			<div class="red">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div style="position: fixed; z-index: 3;width: 100%;bottom: 55px;text-align: center;">
+				<div class="gray">
+					<span>◇</span>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script type="text/javascript">
+	// 矢量列表
+	$(document).ready(function() {
+		var a = 1;
+		var b = 0;
+		var c = 0;
+
+		$(".vector").on('click', function() {
+			event.stopPropagation();
+			if(a) {
+				if($(document).width() < 480) {
+					b = $(document).width();
+				} else if($(document).width() < 768 && $(document).width() > 480) {
+					b = 300;
+				} else {
+					b = 500;
+				}
+				$('.lists').animate({
+					'width': b,
+					'height': '1%'
+				}, 1000, function() {
+					$(this).animate({
+						'height': '100%'
+					}, 1000, function() {
+						$('.lists').children().css('display', 'block');
+						$('.lists').children().animate({
+							'height': '90px',
+							'width': '100%'
+						}, 500);
+					});
+				});
+				a = 0;
+			}
+		})
+
+		$('.lists').on('click', function() {
+			event.stopPropagation();
+			c = 1;
+		})
+		$('#xx').on('click', function() {
+			c = 0;
+			if(a == 0) {
+				if(c == 0) {
+					$('.lists').stop().animate({
+						'height': '1%'
+					}, 1000, function() {
+						$('.lists').children().css('display', 'none');
+						$(this).animate({
+							'width': '0px',
+							'height': '0px'
+						}, 1000);
+						$(this).children().animate({
+							'width': '0px',
+							'height': '0px'
+						}, 1000);
+					});
+					a = 1;
+				}
+
+			}
+		})
+
+		$(document).on('click', function() {
+			c = 0;
+			if(a == 0) {
+				if(c == 0) {
+					$('.lists').stop().animate({
+						'height': '1%'
+					}, 1000, function() {
+						$('.lists').children().css('display', 'none');
+						$(this).animate({
+							'width': '0px',
+							'height': '0px'
+						}, 1000);
+						$(this).children().animate({
+							'width': '0px',
+							'height': '0px'
+						}, 1000);
+					});
+					a = 1;
+				}
+
+			}
+		})
+
+		// 矢量列表
+		var d = 0;
+		d = $('#top').css('height');
+		d = parseInt(d);
+		var o = 0;
+		var i = 0;
+
+		function hd() {
+			if($(document).width() < 480) {
+				console.log(1);
+				$('.lists').stop().animate({
+					'width': '100%'
+				}, 100);
+			} else if(($(document).width() > 480) && ($(document).width() < 768)) {
+				console.log(2);
+				$('.lists').stop().animate({
+					'width': '300px'
+				}, 100);
+			} else {
+				$('.lists').stop().animate({
+					'width': '500px'
+				}, 100);
+				console.log(3);
+
+			}
+
+			d = $('#top').css('height');
+			d = parseInt(d);
+			$(".top ").css("height", d + "px ");
+			$(".mid ").css("height", d + "px ");
+		}
+		$('.red ul').children().on('click', function() {
+			$('.red ul').children().css('background', 'transparent');
+			$(this).css('background', 'white');
+			i = $(this).index();
+			console.log(i);
+			$("#all").stop().animate({
+				'top': -d * i
+			}, 800, function() {
+				o = -d * i;
+				console.log(i);
+			})
+			if(i == 3) {
+				$('.gray span').css('transform', 'rotate(360deg) translateY(3px)');
+
+			} else {
+				$('.gray span').css('transform', 'rotate(180deg) translateY(-3px)');
+
+			}
+		})
+		$('.gray').on('click', function() {
+				if(!$("#all").is(":animated")) {
+
+					i++;
+					if(i == 4) {
+						i = 0;
+
+					}
+					if(i == 3) {
+						$('.gray span').css('transform', 'rotate(360deg) translateY(3px)');
+					}
+
+					$("#all").stop().animate({
+						'top': -d * i
+					}, 800, function() {
+						for(var j = 0; j < $('.red ul li').length; j++) {
+							$(".red ul li").css('backgroundColor', 'transparent');
+						}
+
+						$(".red ul li").eq(i).css('background', 'white');
+						console.log(i);
+						if(i == 0) {
+							$('.gray span').css('transform', 'rotate(180deg) translateY(-3px)');
+						}
+					})
+
+				}
+			})
+			//---------------- 滚轮事件
+
+		$(document).on("mousewheel DOMMouseScroll", function(e) {
+
+			var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) || // chrome & ie
+				(e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1)); // firefox
+
+			if(delta > 0) {
+				if(!$("#all").is(":animated")) {
+					o += d;
+					if(o > 0) {
+						o = 0
+					} else {
+						$("#all").animate({
+							'top': o
+						}, 600, function() {
+							console.log(o);
+							for(var j = 0; j < $('.red ul li').length; j++) {
+								$(".red ul li").css('backgroundColor', 'transparent');
+							}
+
+							$(".red ul li").eq(Math.abs(o / d)).css('background', 'white');
+							console.log(Math.abs(o / d));
+							if(Math.abs(o / d) == 0) {
+								$('.gray span').css('transform', 'rotate(180deg) translateY(-3px)');
+							}
+						});
+
+					}
+				}
+				// 向上滚
+
+			} else if(delta < 0) {
+
+				if(!$("#all").is(":animated")) {
+					o -= d;
+					if(o < -d * 3) {
+						o = -d * 3
+					} else {
+						console.log(o);
+						$("#all").stop().animate({
+							'top': o
+						}, 600, function() {
+							for(var j = 0; j < $('.red ul li').length; j++) {
+								$(".red ul li").css('backgroundColor', 'transparent');
+							}
+
+							$(".red ul li").eq(Math.abs(o / d)).css('background', 'white');
+							console.log(Math.abs(o / d));
+							if(Math.abs(o / d) == 3) {
+								$('.gray span').css('transform', 'rotate(360deg) translateY(3px)');
+							}
+						});
+
+					}
+				}
+
+				// 向下滚
+
+			}
+		});
+
+		// --------------滚轮事件
+		$(window).resize(function() {
+			hd();
+		})
+	})
+</script>
